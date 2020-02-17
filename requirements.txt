@@ -1,0 +1,12 @@
+numpy
+scipy
+matplotlib
+pandas
+pyyaml
+pyproj
+shapely
+requests
+coloredlogs
+hbmqtt
+beeprint
+xlrd
