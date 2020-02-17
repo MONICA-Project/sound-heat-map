@@ -101,8 +101,11 @@ class MapDisplayer:
         map_options = GMapOptions(
             lat=map_pos[0], lng=map_pos[1], zoom=18, map_type="roadmap", tilt=0
         )
+        gmap_api_key = None
+        if gmap_api_key is None:
+            raise NotImplementedError("Add gmaps api key in source.")
         p = gmap(
-            " AIzaSyCd60D3jnN2Ehyhprg1yiYMjQKp-dKfiu0 ",
+            gmap_api_key,
             map_options,
             title="Tivoli",
             height=700,
