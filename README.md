@@ -14,6 +14,8 @@ docker run -t some_tag
 
 or set the environment files dynamically when running the container with the [`-e, --env, --env-file` options](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file).
 
+A Docker image can also be found at [MONICA's dockerhub repository](https://hub.docker.com/repository/docker/monicaproject/sound-heat-map)
+
 ## Development
 
 ### Run locally
