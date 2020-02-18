@@ -92,10 +92,6 @@ class Datastream:
         self.mqtt_topic = MQTT_BROKER_PREFIX + f"/Datastreams({self.id})/Observations"
         self.recent_data = None
 
-        if self.name.endswith("MONICA0010_100090_Id1"):
-            logging.warning(f"Using hardcoded positions for {self.name}.")
-            self.location = [45.797_271, 4.952_230]
-
     def add(self, data):
         self.recent_data = pd.concat((self.recent_data, data))
 
@@ -143,8 +139,6 @@ class DatastreamManager:
             kind="Datastreams",
             parent="ObservedProperties",
             id=observed_property["@iot.id"],
-            # filter="startswith(name, 'SLM-GW')",
-            # filter="startswith(name, 'SDN-PLATFORM')",
             filter=self.filter_mics,
         )
         if not all_datastreams:

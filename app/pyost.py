@@ -6,10 +6,10 @@ Simple API wrapper to query for objects in a OGC SensorThingStore.
 import logging
 import requests
 from urllib.parse import urljoin
-import os
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())
+
 
 class SensorThingStore:
     """A SensorThing Object Store client."""
